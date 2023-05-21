@@ -35,11 +35,12 @@ export default function ProductCard({ image, category, price, title, description
                             onPress={() => setCount(count + 1)}
                         />
                 </View>
-                <Text className=" text-xl font-bold dark:text-white  min-w-0 text-right rounded-full">{price * count}</Text>
+                <Text className=" text-xl font-bold dark:text-white  min-w-0 text-right rounded-full">${price * count}</Text>
                 </View>
                 <Text numberOfLines={2} className=" text-xs  text-black dark:text-white  text-center rounded-full mt-7"> {description}</Text>
 
-                <TouchableOpacity className="bg-black max-w-full rounded-3xl mt-5 mb-1 dark:bg-white">
+                <TouchableOpacity className="bg-black max-w-full rounded-3xl mt-5 mb-1 dark:bg-white"
+                onPress={() => alert('Producto añadido al carrito')}>
 
                     <Text className=" text-center text-lg text-white dark:text-black "> Añadir Al carrito </Text>
 
